@@ -1,0 +1,8 @@
+ version: '2'
+ services:
+   pbackend:
+     build: tarantool
+   pserver:
+     depends_on:
+       - pbackend
+     build: nginx
